@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Órale – Authentic Mexican Flavor | Limerick</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --rojo-chile: #C0392B;
+            --verde-nopal: #556B2F;
+            --amarillo-cemp: #F1C40F;
+            --azul-talavera: #2E86C1;
+            --blanco: #FDFAF5;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            background-color: var(--blanco);
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: var(--rojo-chile);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            border-bottom: 5px solid var(--amarillo-cemp);
+        }
+        h1 { font-family: 'Playfair Display', serif; font-size: 3rem; margin: 0; }
+        .lang-switch { margin-top: 10px; }
+        .lang-switch button { 
+            background: white; border: none; padding: 5px 15px; 
+            cursor: pointer; font-weight: bold; border-radius: 20px;
+            color: var(--rojo-chile); margin: 0 5px;
+        }
+        section { padding: 3rem 10%; }
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid var(--verde-nopal);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .price { color: var(--rojo-chile); font-weight: bold; float: right; }
+        .vegan { color: var(--verde-nopal); font-weight: bold; font-size: 0.8rem; }
+        .spice-levels {
+            background: var(--azul-talavera);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+        }
+        .allergen-box { border: 1px solid #555; padding: 10px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Órale</h1>
+    <p>Authentic Mexican Flavor</p>
+    <div class="lang-switch">
+        <button onclick="setLang('en')">English</button>
+        <button onclick="setLang('es')">Español</button>
+    </div>
+</header>
+
+<section id="about">
+    <h2 class="en">Authentic Taste of Mexico in Limerick</h2>
+    <h2 class="es" style="display:none;">Sabor Auténtico de México en Limerick</h2>
+    <p class="en">Traditional homemade Mexican cuisine. Deep flavors, adjustable spice levels, and fresh ingredients.</p>
+    <p class="es" style="display:none;">Cocina casera tradicional mexicana. Sabores profundos, niveles de picante ajustables e ingredientes frescos.</p>
+</section>
+
+<section id="menu" style="background-color: #f9f4eb;">
+    <h2 class="en">Our Menu</h2>
+    <h2 class="es" style="display:none;">Nuestro Menú</h2>
+    <div class="menu-grid">
+        <div class="card">
+            <span class="price">€14</span>
+            <h3>Pozole Rojo <span class="vegan">(V)</span></h3>
+            <p class="en">Traditional pork or vegan soup (650ml).</p>
+            <p class="es" style="display:none;">Sopa tradicional de cerdo o versión vegana (650ml).</p>
+        </div>
+        <div class="card">
+            <span class="price">€12</span>
+            <h3>Tacos al Pastor</h3>
+            <p class="en">3 marinated pork tacos with pineapple.</p>
+            <p class="es" style="display:none;">3 tacos de cerdo marinado con piña.</p>
+        </div>
+        <div class="card">
+            <span class="price">€10</span>
+            <h3>Tacos de Nopales <span class="vegan">(V)</span></h3>
+            <p class="en">3 grilled cactus tacos.</p>
+            <p class="es" style="display:none;">3 tacos de nopal asado.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="spice-levels">
+        <h3 class="en">Spice Levels</h3>
+        <h3 class="es" style="display:none;">Niveles de Picante</h3>
+        <p>🔵 No Spicy | 🟡 Mild | 🔴 Original</p>
+    </div>
+</section>
+
+<footer>
+    <p class="en">Registered Food Business with HSE | HACCP Compliant</p>
+    <p class="es" style="display:none;">Negocio registrado ante el HSE | Cumplimiento de HACCP</p>
+    <div class="allergen-box">
+        <p class="en">Please ask our staff about the 14 allergens.</p>
+        <p class="es" style="display:none;">Consulte a nuestro personal sobre los 14 alérgenos.</p>
+    </div>
+    <p>© 2025 Órale – Authentic Mexican Flavor</p>
+</footer>
+
+<script>
+    function setLang(lang) {
+        const enElems = document.querySelectorAll('.en');
+        const esElems = document.querySelectorAll('.es');
+        if (lang === 'es') {
+            enElems.forEach(el => el.style.display = 'none');
+            esElems.forEach(el => el.style.display = 'block');
+        } else {
+            enElems.forEach(el => el.style.display = 'block');
+            esElems.forEach(el => el.style.display = 'none');
+        }
+    }
+</script>
+
+</body>
+</html>
