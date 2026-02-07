@@ -100,9 +100,9 @@ Our visual identity is inspired by traditional Mexican culture:
 ## 👥 Team / Equipo
 
 - **Director:** Vicente Rodríguez Hernández
-- **Head Chef:** Aracely Sansores Gongora *(planned/planificado)*
-- **Chef:** Adriana Flores Aroche
-- **Software & Data Systems Engineer:** David Enrique Ochoa Díaz *(planned/planificado)*
+- **Head Chef:**
+- **Chef:** 
+- **Software & Data Systems Engineer:** 
 
 ---
 
